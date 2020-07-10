@@ -32,7 +32,7 @@ public class ClaseHija_Retiro extends ClasePadre_Abstracta {
             System.out.println("Error"+ e);
             
         }finally{
-        System.out.println("El Retiro se ha realizado correctamente");
+        System.out.println("Funcionamiento del programa correcto correcto");
     }
         
         
