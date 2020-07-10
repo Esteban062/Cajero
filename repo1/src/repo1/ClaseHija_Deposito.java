@@ -16,17 +16,13 @@ public class ClaseHija_Deposito extends ClasePadre_Abstracta {
        
         System.out.println("Cuanto desea depositar?");
         Deposito();
-        try{
+        
         transacciones = getSaldo();
         setSaldo(transacciones + deposito);
         System.out.println("------------------------------------");
         System.out.println("Depositaste en tu cuenta: " + deposito);
         System.out.println("Tu nuevo saldo en: " + getSaldo());
         System.out.println("------------------------------------");
-        }catch (Exception e){
-            System.out.println("Error"+ e);
-        }finally {
-            System.out.println("El Deposito se ha realizado correctamente");
-        }
+        
     }
 }
