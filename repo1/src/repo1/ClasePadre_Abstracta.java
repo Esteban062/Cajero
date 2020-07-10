@@ -36,7 +36,7 @@ public abstract class ClasePadre_Abstracta {
                     System.out.println("------------------------------------");
                 }
             }while(bandera == 0 );
-            try{
+            
                 
            
             if( seleccion == 1){
@@ -54,9 +54,7 @@ public abstract class ClasePadre_Abstracta {
                 System.out.println("----------------------------");
                 bandera=2;
             }
-             }catch(Exception e){
-                 System.out.println("Error"+e);
-             }
+             
                 
             
         }while(bandera !=2 );
@@ -64,12 +62,24 @@ public abstract class ClasePadre_Abstracta {
     }
     
     public void Retiro(){
+        try{
         retiro = entrada.nextInt();
-        
+        }catch(Exception e){
+                 System.out.println("Valor no valido"+e);
+             }finally{
+            System.out.println("El programa esta funcionado correctamente");
+             }
+            
     }
     
     public void Deposito(){
+        try{
         deposito = entrada.nextInt();
+            }catch(Exception e){
+                 System.out.println("Valor no valido"+e);
+             }finally{
+            System.out.println("El programa esta funcionado correctamente");
+             }
         
     }
     
