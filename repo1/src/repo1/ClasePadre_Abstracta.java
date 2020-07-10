@@ -7,7 +7,8 @@ package repo1;
 import java.util.Scanner;
 /**
  *
- * @author fvp
+ * @author Esteban
+ * 
  */
 public abstract class ClasePadre_Abstracta {
     protected int transacciones, retiro, deposito;
@@ -17,6 +18,7 @@ public abstract class ClasePadre_Abstracta {
     public void Operaciones(){
         int bandera = 0;
         int seleccion =0;
+      
         do{
             do{
                 System.out.println("Por favor seleccione una opcion:");
@@ -34,7 +36,9 @@ public abstract class ClasePadre_Abstracta {
                     System.out.println("------------------------------------");
                 }
             }while(bandera == 0 );
-            
+            try{
+                
+           
             if( seleccion == 1){
                 ClasePadre_Abstracta objetoClase = new ClaseHija_Consulta();
                 objetoClase.Transacciones();
@@ -50,6 +54,11 @@ public abstract class ClasePadre_Abstracta {
                 System.out.println("----------------------------");
                 bandera=2;
             }
+             }catch(Exception e){
+                 System.out.println("Error"+e);
+             }
+                
+            
         }while(bandera !=2 );
     
     }

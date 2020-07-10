@@ -7,7 +7,7 @@ package repo1;
 
 /**
  *
- * @author fvp
+ * @author Esteban
  */
 public class ClaseHija_Retiro extends ClasePadre_Abstracta {
     
@@ -15,6 +15,7 @@ public class ClaseHija_Retiro extends ClasePadre_Abstracta {
         
         System.out.println("Cuanto deseas retirar del cajero?" );
         Retiro();
+        try{
         if(retiro <= getSaldo()){
             transacciones = getSaldo();
             setSaldo(transacciones - retiro);
@@ -27,7 +28,12 @@ public class ClaseHija_Retiro extends ClasePadre_Abstracta {
             System.out.println("Fondos insuficientes!");
             System.out.println("------------------------------------");
         }
-        
+        }catch (Exception e){
+            System.out.println("Error"+ e);
+            
+        }finally{
+        System.out.println("El Retiro se ha realizado correctamente");
+    }
         
         
     }
